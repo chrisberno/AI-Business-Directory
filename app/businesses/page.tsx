@@ -1,5 +1,5 @@
 import { getLatestBusinessesFromDb } from "@/actions/business";
-import { BusinessState } from "@/utils/types/business";
+import type { BusinessState } from "@/utils/types/business";
 import Link from "next/link";
 import BusinessCard from "@/components/business/cards/business-card";
 import Pagination from "@/components/nav/pagination";
@@ -11,7 +11,7 @@ interface BusinessesPageProps {
 
 export default async function Home({ searchParams }: BusinessesPageProps) {
   const page = searchParams?.page
-    ? parseInt(searchParams.page as unknown as string, 10)
+    ? Number.parseInt(searchParams.page as unknown as string, 10)
     : 1;
   const limit = 6;
 
@@ -32,7 +32,7 @@ export default async function Home({ searchParams }: BusinessesPageProps) {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {businesses.map((business: BusinessState) => (
-          <Link href={`/business/${business.slug}`}>
+          <Link key={business.slug} href={`/business/${business.slug}`}>
             <div className="transform transition duration-300 hover:scale-105 hover:shadow-lg">
               <BusinessCard business={business} />
             </div>
