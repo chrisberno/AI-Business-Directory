@@ -23,12 +23,12 @@ export default function LandingPage() {
           height: "60vh",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#010818] z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#010818] z-0" />
 
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center px-4 w-full max-w-4xl">
             <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
-              Discover and Promote Local Businesses with{" "}
+              Discover & Promote Older Adult Services with{" "}
               <span className="inline-block">
                 <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 text-transparent bg-clip-text animate-pulse">
                   AI
@@ -37,8 +37,8 @@ export default function LandingPage() {
             </h1>
 
             <p className="text-white mb-5 mx-auto">
-              Our Local Business Directory helps you find and support nearby
-              businesses. It's free to list your business and easy to discover
+              Our Adult Daycare Services Directory helps older adults and their caregivers find and access the
+              the services they need. It's free to list your business and easy to discover
               local gems. Connect with your community today!
             </p>
             <Link href="/business/add">
